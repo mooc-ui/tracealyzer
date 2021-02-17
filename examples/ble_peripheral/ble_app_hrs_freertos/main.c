@@ -1134,6 +1134,7 @@ static void queue_time_init(void)
 static void test_semaphore_create(void)
 {
     m_test_xSemaphore = xSemaphoreCreateBinary();
+		vQueueAddToRegistry( m_test_xSemaphore, "test_xSemap_name" );
 }
 
 
